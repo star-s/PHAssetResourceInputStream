@@ -44,7 +44,7 @@ import POSInputStreamLibrary
         return isOpenCompleted && !isAtEnd
     }
 
-    public dynamic private(set) var error: Error! = nil
+    public dynamic private(set) var error: Error? = nil
 
     @objc internal dynamic static func keyPathsForValuesAffectingHasBytesAvailable() -> Set<String> {
         return [
@@ -57,16 +57,16 @@ import POSInputStreamLibrary
         isOpenCompleted = true
     }
 
-    public func property(forKey key: String!) -> Any! {
-        guard key == Stream.PropertyKey.fileCurrentOffsetKey.rawValue else {
+    public func property(forKey key: Stream.PropertyKey) -> Any? {
+        guard key == .fileCurrentOffsetKey else {
             return nil
         }
 
         return NSNumber(value: readOffset + bytesGenerator.readOffset)
     }
 
-    public func setProperty(_ property: Any!, forKey key: String!) -> Bool {
-        guard let number = property as? NSNumber , key == Stream.PropertyKey.fileCurrentOffsetKey.rawValue else {
+    public func setProperty(_ property: Any?, forKey key: Stream.PropertyKey) -> Bool {
+        guard let number = property as? NSNumber , key == .fileCurrentOffsetKey else {
             return false
         }
 
@@ -88,7 +88,7 @@ import POSInputStreamLibrary
         }
     }
 
-    public func getBuffer(_ buffer: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>!, length bufferLength: UnsafeMutablePointer<UInt>!) -> Bool {
+    public func getBuffer(_ buffer: UnsafeMutablePointer<UnsafeMutablePointer<UInt8>?>, length bufferLength: UnsafeMutablePointer<UInt>) -> Bool {
         return false
     }
 

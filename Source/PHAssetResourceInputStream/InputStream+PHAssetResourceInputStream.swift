@@ -16,6 +16,6 @@ extension InputStream {
         let factory = AssetBytesGeneratorFactory(assetResource: assetResource)
         let dataSource = InputStreamDataSource(bytesGeneratorFactory: factory)
         let stream = POSBlobInputStream(dataSource: dataSource)
-        return stream!
+        return stream
     }
 }

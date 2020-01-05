@@ -64,7 +64,7 @@ class InputStreamDataSourceTests: XCTestCase {
 
         XCTAssertEqual(dataRead, -1)
         XCTAssertEqual(errorListener.numberOfCalls, 1)
-        XCTAssertEqual(dataSource.error as NSError, error)
+        XCTAssertEqual(dataSource.error as! NSError, error)
     }
 
     func testShouldUpdateReadOffset() {
@@ -76,7 +76,7 @@ class InputStreamDataSourceTests: XCTestCase {
         let dataSource = InputStreamDataSource(bytesGeneratorFactory: factory)
 
         let newOffset: UInt64 = UInt64.max
-        let valueWasUpdated = dataSource.setProperty(newOffset, forKey: Stream.PropertyKey.fileCurrentOffsetKey.rawValue)
+        let valueWasUpdated = dataSource.setProperty(newOffset, forKey: .fileCurrentOffsetKey)
         let offsetFromProperty = dataSource.readOffset
 
         XCTAssertEqual(valueWasUpdated, true)
@@ -113,10 +113,10 @@ class InputStreamDataSourceTests: XCTestCase {
 extension InputStreamDataSource {
     var readOffset: UInt64 {
         get {
-            return property(forKey: Stream.PropertyKey.fileCurrentOffsetKey.rawValue) as! UInt64
+            return property(forKey: .fileCurrentOffsetKey) as! UInt64
         }
         set {
-            _ = setProperty(newValue, forKey: Stream.PropertyKey.fileCurrentOffsetKey.rawValue)
+            _ = setProperty(newValue, forKey: .fileCurrentOffsetKey)
         }
     }
 }
