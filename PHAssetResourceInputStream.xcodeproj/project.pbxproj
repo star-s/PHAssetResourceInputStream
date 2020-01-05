@@ -53,10 +53,10 @@
 		18BFE0039B2474B51559E1B0 /* Pods-PHAssetResourceInputStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHAssetResourceInputStream.release.xcconfig"; path = "Pods/Target Support Files/Pods-PHAssetResourceInputStream/Pods-PHAssetResourceInputStream.release.xcconfig"; sourceTree = "<group>"; };
 		3A338066946160DF605BC2EC /* Pods-PHAssetResourceInputStream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHAssetResourceInputStream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PHAssetResourceInputStream/Pods-PHAssetResourceInputStream.debug.xcconfig"; sourceTree = "<group>"; };
 		533DA3D41D6C6FE100EA9D75 /* PHAssetResourceInputStream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PHAssetResourceInputStream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		533DA3D71D6C6FE100EA9D75 /* PHAssetResourceInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PHAssetResourceInputStream.h; sourceTree = "<group>"; };
-		533DA3D91D6C6FE200EA9D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		533DA3D71D6C6FE100EA9D75 /* PHAssetResourceInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PHAssetResourceInputStream.h; path = ../../PHAssetResourceInputStream/PHAssetResourceInputStream.h; sourceTree = "<group>"; };
+		533DA3D91D6C6FE200EA9D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../PHAssetResourceInputStream/Info.plist; sourceTree = "<group>"; };
 		533DA3DE1D6C6FE200EA9D75 /* PHAssetResourceInputStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PHAssetResourceInputStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		533DA3E51D6C6FE200EA9D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		533DA3E51D6C6FE200EA9D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../PHAssetResourceInputStreamTests/Info.plist; sourceTree = "<group>"; };
 		533DA3FC1D6C7A4A00EA9D75 /* DataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
 		533DA3FE1D6C7A6100EA9D75 /* DataGeneratorWithOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataGeneratorWithOffset.swift; sourceTree = "<group>"; };
 		533DA4001D6C7A7400EA9D75 /* BytesGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BytesGenerator.swift; sourceTree = "<group>"; };
@@ -160,7 +160,8 @@
 				533DA3D71D6C6FE100EA9D75 /* PHAssetResourceInputStream.h */,
 				533DA3D91D6C6FE200EA9D75 /* Info.plist */,
 			);
-			path = PHAssetResourceInputStream;
+			name = PHAssetResourceInputStream;
+			path = Source/PHAssetResourceInputStream;
 			sourceTree = "<group>";
 		};
 		533DA3E21D6C6FE200EA9D75 /* PHAssetResourceInputStreamTests */ = {
@@ -174,7 +175,8 @@
 				53F392551E4D022400467625 /* InputStreamDataSourceTests.swift */,
 				533DA3E51D6C6FE200EA9D75 /* Info.plist */,
 			);
-			path = PHAssetResourceInputStreamTests;
+			name = PHAssetResourceInputStreamTests;
+			path = Tests/PHAssetResourceInputStreamTests;
 			sourceTree = "<group>";
 		};
 		53E4B1841D6CECAE006C83E2 /* Helpers */ = {
@@ -281,6 +283,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 533DA3CA1D6C6FE100EA9D75;
