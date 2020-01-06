@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import POSInputStreamLibrary
+import POSInputStreamCoreLibrary
 @testable import PHAssetResourceInputStream
 
 private let readLength = 1024

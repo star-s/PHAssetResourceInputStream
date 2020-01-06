@@ -8,7 +8,7 @@
 
 import Foundation
 import Photos
-import POSInputStreamLibrary
+import POSInputStreamCoreLibrary
 
 extension InputStream {
     @available(iOS 9.0, *)

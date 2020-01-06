@@ -8,7 +8,7 @@
 
 import Foundation
 import Photos
-import POSInputStreamLibrary
+import POSInputStreamCoreLibrary
 
 @objc public final class InputStreamDataSource: NSObject, POSBlobInputStreamDataSource {
     private var readOffset: UInt64 = 0
